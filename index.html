@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,15 +20,15 @@
     
     <!-- Botones usuario y Truekea -->
     <div class="user-actions">
-      <a href="chats.html" class="btn btn-truekea">
+      <a href="" class="btn btn-truekea">
         <i class="fas fa-comments me-1"></i> Chats
       </a>
       
-      <a href="nosotros.html" class="btn btn-truekea">
+      <a href="" class="btn btn-truekea">
         <i class="fas fa-users me-1"></i> Nosotros 
       </a>
 
-      <a href="trokar.html" class="btn btn-truekea">
+      <a href="" class="btn btn-truekea">
         <i class="fas fa-exchange-alt me-1"></i> Trokar
       </a> 
 
@@ -42,19 +43,38 @@
 
  <div class="demo-container">
 
-  <!-- Login -->
-<div id="loginModal" >
+<!-- Login -->
+<div id="loginModal" style="display:none;">
   <h2>Iniciar Sesión</h2>
   <form id="loginForm">
     <a>Usuario:</a><br>
-    <input type="text" id="username"><br>
+    <input type="text" id="loginUsername"><br>
     <a>Contraseña:</a><br>
-    <input type="password" id="password"><br>
-    <div id="loginMessage" ></div><br>
+    <input type="password" id="loginPassword"><br>
+    <div id="loginMessage"></div><br>
     <button type="button" onclick="validateLogin()">Ingresar</button>
     <button type="button" onclick="closeModal()">Cancelar</button>
   </form>
+  <button type="button" onclick="openRegisterModal()">Registrarse</button>
 </div>
+
+<!-- Register -->
+<div id="registerModal" style="display:none;">
+  <h2>Registrarse</h2>
+  <form id="registerForm">
+    <a>Nombre de Usuario:</a><br>
+    <input type="text" id="registerUsername"><br>
+    <a>Contraseña:</a><br>
+    <input type="password" id="registerPassword"><br>
+    <a>Confirmar Contraseña:</a><br>
+    <input type="password" id="confirmPassword"><br>
+    <div id="registerMessage"></div><br>
+    <button type="button" onclick="validateRegistration()">Registrar</button>
+    <button type="button" onclick="closeRegisterModal()">Cancelar</button>
+  </form>
+  <button type="button" onclick="openModal()">Ya tengo cuenta, Iniciar sesión</button>
+</div>
+
 
 
 
