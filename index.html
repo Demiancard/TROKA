@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troka - Chat de Intercambiooo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rF1p2576/eM7xZ1D89Q5tZ7uC14jR3G659N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-rF1p2576/eM7xZ1D89Q5tZ7uC14jR3G659N" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <!-- HEADER / BANNER -->
+  <header class="site-header"> 
+  <div class="header-inner">
+    <img src="img/Leonardo_Phoenix_10_Design_a_professional_logo_for_Troka_a_bar_0 (1).jpg" alt="Logo Troka" class="logo">
+    
+    <!-- Botones usuario y Truekea -->
+    <div class="user-actions">
+      <a href="chats.html" class="btn btn-truekea">
+        <i class="fas fa-comments me-1"></i> Chats
+      </a>
+      
+      <a href="nosotros.html" class="btn btn-truekea">
+        <i class="fas fa-users me-1"></i> Nosotros 
+      </a>
+
+      <a href="trokar.html" class="btn btn-truekea">
+        <i class="fas fa-exchange-alt me-1"></i> Trokar
+      </a> 
+
+
+      <button class="btn btn-truekea" data-bs-toggle="modal" data-bs-target="#loginModal" onclick="openModal()">Iniciar Sesión</button>
+      <button href="nosotros.html" class="btn user-logo">
+        <img src="img/fotousuario.jpg" alt="Mi perfil">
+      </button>
+    </div>
+  </div>
+</header>
+
+ <div class="demo-container">
+
+  <!-- Login -->
+<div id="loginModal" >
+  <h2>Iniciar Sesión</h2>
+  <form id="loginForm">
+    <a>Usuario:</a><br>
+    <input type="text" id="username"><br>
+    <a>Contraseña:</a><br>
+    <input type="password" id="password"><br>
+    <div id="loginMessage" ></div><br>
+    <button type="button" onclick="validateLogin()">Ingresar</button>
+    <button type="button" onclick="closeModal()">Cancelar</button>
+  </form>
+</div>
+
+
+
+
+  
+
+<body>
+ 
+  
+<!-- CARRUSEL DE CATEGORÍAS -->
+<section class="category-section">
+  <div class="category-carousel">
+    <div class="carousel-wrapper">
+      <a href="#muebles" class="category-item">Muebles</a>
+      <a href="#Vehículos" class="category-item">Vehículos</a>
+      <a href="#Ropa" class="category-item">Ropa</a>
+      <a href="#Casas" class="category-item">Casas</a>
+      <a href="#Artículos" class="category-item">Artículos</a>
+      <a href="#Videojuegos" class="category-item">Videojuegos</a>
+      <a href="#Electrodomésticos" class="category-item">Electrodomésticos</a>
+      <a href="#Herramientas" class="category-item">Herramientas</a>
+      <a href="#Dispositivos" class="category-item">Dispositivos</a>
+      <a href="#Accesorios" class="category-item">Accesorios</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PRODUCTOS DESTACADOS -->
+  <section class="products-section">
+    <h2 class="section-title">Artículos Destacados</h2>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/caravanas.jpg" alt="Caravanas">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Accesorios</span>
+          <h3 class="product-title">Caravanas plateadas</h3>
+          <p class="product-description">Caravanas en poco uso, excelente estado. Materiales de alta calidad con detalles artesanales.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/auriculares.jpg" alt="Auriculares Gaming">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Dispositivos</span>
+          <h3 class="product-title">Auriculares Gaming</h3>
+          <p class="product-description">Auriculares con micrófono incorporado, sonido envolvente y luces RGB. Ideal para gamers.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/gorrolana.jpg" alt="Gorro de lana">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Ropa</span>
+          <h3 class="product-title">Gorro de lana tejido</h3>
+          <p class="product-description">Gorro tejido a mano con lana de primera calidad. Abrigado y con diseño único.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </section>
+ <!-- SECCIÓN POR CATEGORÍAS -->
+ <section class="category-products-section">
+  <h2 class="section-title">Explora por Categorías</h2>
+  
+  <!-- Categoría: Muebles -->
+  <div id="muebles" class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Muebles</h3>
+      <a href="categorias/ropa.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/cafetera.jpg" alt="Cafetera automática">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Electrodomésticos</span>
+          <h3 class="product-title">Cafetera automática</h3>
+          <p class="product-description">Cafetera con molinillo integrado y programador. Prepara todo tipo de cafés con un solo botón.</p>
+         <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/licuadora.jpg" alt="Licuadora profesional">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Electrodomésticos</span>
+          <h3 class="product-title">Licuadora profesional</h3>
+          <p class="product-description">Licuadora de alta potencia (1500W). Ideal para batidos, sopas y triturar hielo. Como nueva.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/aspiradora.jpg" alt="Aspiradora robot">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Electrodomésticos</span>
+          <h3 class="product-title">Aspiradora robot</h3>
+          <p class="product-description">Robot aspirador con mapeo láser. Programable desde el móvil y compatible con asistentes de voz.</p>
+         <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categoría: Casas -->
+  <div id="Casas" class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Casas</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/casa1.jpg" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Edificios</span>
+          <h3 class="product-title">Casa de 6</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/casa2.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Edificios</span>
+          <h3 class="product-title">Casa de 2</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/casa3.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Edificios</span>
+          <h3 class="product-title">Casa de 4</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+         <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- Categoría: Vehículos -->
+  <div id="Vehículos" class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Vehículos</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/bici.jpg" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Bicicleta montañera</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/patinetaele.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Patineta eléctrica</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/scooter.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Moto scooter</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Categoría: Ropa -->
+  <div id="Ropa" class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Ropa</h3>
+      <a href="categorias/electrodomesticos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/chaqueta.jpg" alt="Chaqueta de cuero">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Ropa</span>
+          <h3 class="product-title">Chaqueta de cuero</h3>
+          <p class="product-description">Chaqueta de cuero genuino en excelente estado. Talla M, color negro con detalles en plata.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/vestido.jpg" alt="Vestido elegante">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Ropa</span>
+          <h3 class="product-title">Vestido elegante</h3>
+          <p class="product-description">Vestido para ocasiones especiales, color azul noche. Talla 38, usado una sola vez.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/jean.jpg" alt="Jeans premium">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Ropa</span>
+          <h3 class="product-title">Jeans premium</h3>
+          <p class="product-description">Jeans de marca premium, corte recto. Talla 32, poco uso y en perfectas condiciones.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categoría: Articulos -->
+  <div class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Articulos</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/bici.jpg" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Bicicleta montañera</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/patinetaele.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Patineta eléctrica</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/scooter.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Moto scooter</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categoría: Videojuegos -->
+  <div class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Videojuegos</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/juegos1.jpg" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Bicicleta montañera</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/juego2.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Patineta eléctrica</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/juego3.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Moto scooter</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categoría: Electrodomesticos -->
+  <div class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Electrodomesticos</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/gorrolana.jpg" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Bicicleta montañera</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/chaqueta.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Patineta eléctrica</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/licuadora.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Moto scooter</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categoría: Herramientas -->
+  <div class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Herramientas</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/pinza.png" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Bicicleta montañera</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/motocierrra.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Patineta eléctrica</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/martillo.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Moto scooter</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categoría: Dispositivos-->
+  <div class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Dispositivos</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/bici.jpg" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Bicicleta montañera</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/scooter.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Patineta eléctrica</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/patinetaele.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Moto scooter</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categoría: Accesorios -->
+  <div class="category-block">
+    <div class="category-header">
+      <h3 class="category-title">Accesorios</h3>
+      <a href="categorias/vehiculos.html" class="view-more">Ver más <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/caravanas.jpg" alt="Bicicleta montañera">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Bicicleta montañera</h3>
+          <p class="product-description">Bicicleta de montaña con suspensión completa. 27 velocidades, frenos de disco hidráulicos.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/licuadora.jpg" alt="Patineta eléctrica">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Patineta eléctrica</h3>
+          <p class="product-description">Patineta eléctrica con autonomía de 25km. Velocidad máxima 25km/h, incluye cargador.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="img/productos/aspiradora.jpg" alt="Moto scooter">
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vehículos</span>
+          <h3 class="product-title">Moto scooter</h3>
+          <p class="product-description">Scooter 125cc con solo 5000km. Primer dueño, incluye dos cascos y maletín trasero.</p>
+          <a href="html/trokar.html" class="btn-trokar">Trokar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3 class="footer-title">Troka</h3>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-title">Enlaces</h3>
+        <div class="footer-links">
+        
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-title">Nosotros</h3>
+        <div class="footer-links">
+          
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Troka - Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+   <script src="js/login.js"></script>
+
+
+</div>
+</body>
+</html>
