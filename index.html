@@ -33,7 +33,9 @@
       </a> 
 
 
-      <button class="btn btn-truekea" data-bs-toggle="modal" data-bs-target="#loginModal" onclick="openModal()">Iniciar Sesión</button>
+      
+    <button class="btn btn-truekea" onclick="abrirLogin()">Iniciar Sesión</button>
+
       <button href="nosotros.html" class="btn user-logo">
         <img src="img/fotousuario.jpg" alt="Mi perfil">
       </button>
@@ -43,37 +45,37 @@
 
  <div class="demo-container">
 
-<!-- Login -->
-<div id="loginModal" style="display:none;">
-  <h2>Iniciar Sesión</h2>
-  <form id="loginForm">
-    <a>Usuario:</a><br>
-    <input type="text" id="loginUsername"><br>
-    <a>Contraseña:</a><br>
-    <input type="password" id="loginPassword"><br>
-    <div id="loginMessage"></div><br>
-    <button type="button" onclick="validateLogin()">Ingresar</button>
-    <button type="button" onclick="closeModal()">Cancelar</button>
-  </form>
-  <button type="button" onclick="openRegisterModal()">Registrarse</button>
-</div>
+     <!-- Modal de Inicio de Sesión -->
+    <div id="modalInicioSesion">
+        <h2>Iniciar Sesión</h2>
+        <form id="formularioLogin">
+            <span class="etiqueta">Usuario:</span><br>
+            <input type="text" id="usuarioLogin" class="campo-entrada" placeholder="Ingresa tu usuario"><br>
+            <span class="etiqueta">Contraseña:</span><br>
+            <input type="password" id="contrasenaLogin" class="campo-entrada" placeholder="Ingresa tu contraseña"><br>
+            <div id="mensajeLogin"></div><br>
+            <button type="button" class="boton-principal" onclick="validarLogin()">Ingresar</button>
+            <button type="button" class="boton-secundario" onclick="cerrarLogin()">Cancelar</button>
+        </form>
+        <button type="button" class="boton-principal" onclick="abrirRegistro()">¿No tienes cuenta? Regístrate</button>
+    </div>
 
-<!-- Register -->
-<div id="registerModal" style="display:none;">
-  <h2>Registrarse</h2>
-  <form id="registerForm">
-    <a>Nombre de Usuario:</a><br>
-    <input type="text" id="registerUsername"><br>
-    <a>Contraseña:</a><br>
-    <input type="password" id="registerPassword"><br>
-    <a>Confirmar Contraseña:</a><br>
-    <input type="password" id="confirmPassword"><br>
-    <div id="registerMessage"></div><br>
-    <button type="button" onclick="validateRegistration()">Registrar</button>
-    <button type="button" onclick="closeRegisterModal()">Cancelar</button>
-  </form>
-  <button type="button" onclick="openModal()">Ya tengo cuenta, Iniciar sesión</button>
-</div>
+    <!-- Modal de Registro -->
+    <div id="modalRegistro">
+        <h2>Crear Cuenta Nueva</h2>
+        <form id="formularioRegistro">
+            <span class="etiqueta">Nombre de Usuario:</span><br>
+            <input type="text" id="usuarioRegistro" class="campo-entrada" placeholder="Elige un nombre de usuario"><br>
+            <span class="etiqueta">Contraseña:</span><br>
+            <input type="password" id="contrasenaRegistro" class="campo-entrada" placeholder="Crea una contraseña"><br>
+            <span class="etiqueta">Confirmar Contraseña:</span><br>
+            <input type="password" id="confirmarContrasena" class="campo-entrada" placeholder="Repite tu contraseña"><br>
+            <div id="mensajeRegistro"></div><br>
+            <button type="button" class="boton-principal" onclick="validarRegistro()">Crear Cuenta</button>
+            <button type="button" class="boton-secundario" onclick="cerrarRegistro()">Cancelar</button>
+        </form>
+        <button type="button" class="boton-principal" onclick="abrirLogin()">¿Ya tienes cuenta? Inicia sesión</button>
+    </div>
 
 
 
